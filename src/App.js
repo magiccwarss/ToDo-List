@@ -45,7 +45,7 @@ function App() {
               </button>
             </div>
             <ul className="toDo_items">
-              {items.map((item, index) => {
+              {items.map((item) => {
                 return (
                   <li className="toDo_item" key={item.id}>
                     {item.value}{' '}
@@ -56,6 +56,9 @@ function App() {
                 );
               })}
             </ul>
+            <p className={items.length <= 0 ? 'you_have_zero' : 'you_have'}>
+              You have {items.length}
+            </p>
           </div>
         </div>
       </div>

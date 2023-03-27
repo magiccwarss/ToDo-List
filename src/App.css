@@ -22,10 +22,10 @@
 .toDo_input input {
   font-size: 18px;
   font-weight: 500;
+  margin-right: 10px;
   transition: all 0.5s ease-in-out;
-
-
 }
+
 
 .toDo_input input::placeholder {
   font-weight: 400;
@@ -35,14 +35,18 @@
   outline: none;
 }
 
+
 .toDo_btn {
   font-weight: 400;
+  border: 1px solid black;
+  color: black ;
+  padding: 5px 15px;
   transition: all 0.5s ease-in-out;
 }
 
 .toDo_btn:hover {
-  border: 1px solid black;
-  padding: 5px 15px;
+  color: #FFFF;
+  background-color: black;
 }
 
 .toDo_items {
@@ -73,5 +77,11 @@
 .toDo_item_btn:hover {
   background-color: #eeecec;
   padding: 10px;
- 
+}
+.you_have_zero{
+  font-weight: 300;
+}
+
+.you_have{
+  font-weight: 600;
 }
