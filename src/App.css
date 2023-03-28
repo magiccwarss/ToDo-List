@@ -1,22 +1,82 @@
-.toDo {}
+.toDo {
+  padding-top: 30px;
+  height: 100vh;
+}
+
+.toDo.dark {
+  background-color: black;
+  padding: 0px 30px;
+  padding-top: 30px;
+}
 
 .container {
-  max-width: 800px;
   padding: 0px 15px;
-  margin: 0 auto;
+}
+
+.container.dark {
+  border: 1px solid white;
+  background-color: black;
+}
+
+.text_and_moon {
+  padding-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.general_text {
+  display: inline-block;
+  text-align: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.general_text.dark {
+  color: white;
+}
+
+.moon {
+  cursor: pointer;
 }
 
 .toDo_content {
-  margin-top: 100px;
   padding: 15px 30px;
   border: 1px solid black;
+}
+
+.toDo_content.dark {
+  border: 1px solid white;
+  margin-bottom: 30px;
 }
 
 .toDo_input {
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.toDo_input.dark input {
+  padding: 5px 20px;
+
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+.toDo_input.dark input::placeholder {
+  color: white;
+}
+
+.toDo_input.dark button {
+  border: 1px solid white;
+  color: white;
 }
 
 .toDo_input input {
@@ -39,7 +99,7 @@
 .toDo_btn {
   font-weight: 400;
   border: 1px solid black;
-  color: black ;
+  color: black;
   padding: 5px 15px;
   transition: all 0.5s ease-in-out;
 }
@@ -63,25 +123,88 @@
   font-size: 20px;
   border: 1px solid black;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 20px;
   transition: all 0.3s ease-in-out;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.toDo_item p{
+}
+
+.toDo_item.dark {
+  border: 1px solid white;
+  color: white;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .toDo_item_btn {
   transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.toDo_item_btn:hover {
-  background-color: #eeecec;
-  padding: 10px;
-}
-.you_have_zero{
-  font-weight: 300;
+.toDoButtons {
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.you_have{
+.you_have span {
   font-weight: 600;
+}
+
+.you_have.dark {
+  color: white;
+}
+
+
+.clearAll {}
+
+.clearAll.dark {
+  background-color: white;
+  color: black;
+  padding: 5px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.clearAll.dark:hover {
+  color: white;
+  background-color: black;
+}
+
+.sortData {}
+
+.sortData.dark {
+  background-color: white;
+  color: black;
+  padding: 5px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sortData.dark:hover {
+  color: white;
+  background-color: black;
+}
+
+@media (max-width:530px) {
+  .toDo_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
